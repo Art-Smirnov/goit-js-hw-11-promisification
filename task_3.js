@@ -10,8 +10,7 @@ const makeTransaction = transaction => {
       const canProcess = Math.random() > 0.3;
 
       if (canProcess) {
-        const id = transaction.id;
-        resolve({ id, delay });
+        resolve({ id: transaction.id, delay });
       } else {
         reject(transaction.id);
       }
